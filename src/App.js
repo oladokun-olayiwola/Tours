@@ -22,12 +22,7 @@ function App() {
     }
   }
   useEffect(() => {
-    fetch("https://course-api.com/react-tours-project")
-      .then((res) => res.json())
-      .then((data) => {
-        setTours(data);
-        setLoading(false);
-      });
+    fetchTours();
   }, []);
 
   if (loading) {
